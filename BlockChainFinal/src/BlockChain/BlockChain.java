@@ -168,6 +168,7 @@ public class BlockChain {
     	}
 		public static ArrayList<transactionData> createTxDatabase()
     	{		
+			output.txDataBase.clear(); // очищаем базу данных транзакций, для того чтобы повторный вызов функции обновлял базу данных, а не добавлял в нее транзакции повторно
 			int blockNumber = output.BlockChainHistory.size(); 				// количество блоков
 			for(int i = 0; i< blockNumber; i++)
 			{
